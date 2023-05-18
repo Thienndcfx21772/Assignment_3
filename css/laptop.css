@@ -135,6 +135,7 @@ body {
   flex: 1;
   margin: 20px 15px;
   box-shadow: 1px 1px 5px #d0d0d0;
+  align-content: start;
 }
 .parent:hover {
   transform: translateY(-3px);
