@@ -1,0 +1,332 @@
+* {
+  margin: 0px;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.bg-grey {
+  background: #f7f7f7;
+}
+.icon {
+  color: #0abde3;
+}
+.section-title {
+  font-weight: bold;
+  padding: 40px 0;
+}
+
+/* phần 1 - banner */
+
+.avatar-banner {
+  position: relative;
+  filter: brightness(60%);
+  object-fit: cover;
+  max-height: 500px;
+  min-height: 300px;
+  box-shadow: 1px 1px 5px #d0d0d0;
+}
+.text-banner {
+  text-align: center;
+  position: absolute;
+  color: white;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.text-banner span {
+  color: #ddd;
+}
+
+/* phần 2 - menu nav */
+
+.nav-items {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+}
+.nav-items a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  padding: 20px;
+  justify-content: center;
+  border-left: 1px solid #d0d0d0;
+}
+
+.nav-items a:nth-child(2) {
+  border-right: 1px solid #d0d0d0;
+}
+.nav-items a:nth-child(5) {
+  border-right: 1px solid #d0d0d0;
+}
+
+.nav-items a:hover {
+  background-color: orange;
+  color: white;
+  align-items: center;
+}
+.avatar-nav {
+  position: relative;
+  min-width: 200px;
+}
+.avatar {
+  position: absolute;
+  display: flex;
+  width: 200px;
+  height: 200px;
+  transform: translate(50%, -50%);
+  top: 40%;
+  left: -40%;
+}
+.img-nav {
+  border-radius: 50%;
+  border: 10px solid white;
+}
+/* phần 3 - mục tiêu nghề nghiệp và thông tin cá nhân */
+
+.thong-tin {
+  background-color: #e7e7e7;
+}
+
+.thong-tin span {
+  font-weight: bold;
+}
+
+/* ẩn thông tin cá nhân đến khi submit email */
+
+.info {
+  list-style: none;
+  display: none;
+}
+#email {
+  width: 300px;
+  border-radius: 5px;
+  border: 1px solid rgb(38, 168, 219);
+  box-shadow: 1px 1px 5px #d0d0d0;
+}
+#error-email {
+  color: red;
+}
+.submit {
+  cursor: pointer;
+}
+.submit:hover {
+  background-color: #16a3ce;
+  transition: all 0.5s;
+}
+
+/* phần 4 -----------*/
+/* reponsive kinh nghiệm -> sở thích cho  laptop */
+@media only screen and (min-width: 992px) {
+  .box-job {
+    display: flex;
+    width: 100%;
+  }
+}
+/* phần 4 từ kinh nghiệm -> sở thích phần chung */
+.parent {
+  border: 1px solid #d0d0d0;
+  flex: 1;
+  margin: 20px 15px;
+  box-shadow: 1px 1px 5px #d0d0d0;
+}
+.parent:hover {
+  transform: translateY(-3px);
+  transition: transform 0.3s ease-in;
+}
+.box-title {
+  font-size: 10px;
+  font-weight: bold;
+  padding: 10px;
+}
+.box-icon {
+  font-size: 40px;
+}
+.job-item {
+  position: relative;
+}
+.job-item::before {
+  content: "";
+  position: absolute;
+  background-color: #0abde3;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  left: -20px;
+  top: 6px;
+}
+.job {
+  padding-bottom: 5px;
+}
+.button {
+  color: white;
+  font-style: italic;
+  border-radius: 10px;
+  background-color: #0abde3;
+  font-size: 20px;
+  padding: 5px 10px;
+}
+
+/* -----phần 4 sở thích ------*/
+
+.st-icon p {
+  padding-top: 10px;
+}
+.st-icon i {
+  color: #0abde3;
+  height: 40px;
+  width: 40px;
+  font-weight: bold;
+  border: 2px solid #0abde3;
+  border-radius: 50%;
+  text-align: center;
+  padding: 8px 5px;
+}
+
+/* -----phần 4 ngôn ngữ và kỹ năng---- */
+
+.bright {
+  background-color: #0abde3;
+  display: inline-block;
+  width: 40px;
+  height: 3px;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+.dark {
+  background-color: rgb(201, 195, 195);
+  display: inline-block;
+  width: 40px;
+  height: 3px;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+/* display none để viết javascript */
+.s-content {
+  display: none;
+}
+.view-more {
+  display: none;
+}
+
+/* -----phần 5 - chứng chỉ và giải thưởng------- */
+
+.img-cc {
+  object-fit: cover;
+  width: 100%;
+}
+
+.cer-content1 {
+  border-right: 2px solid #d6c08d;
+  border-bottom: 2px solid #d6c08d;
+}
+.cer-content2 {
+  border-bottom: 2px solid #d6c08d;
+}
+.cer-content h5 {
+  text-transform: uppercase;
+  padding: 5px 0;
+}
+
+/* ---phần 6 - dự án --- */
+
+.pro-DA {
+  border: 1px solid #d0d0d0;
+  box-shadow: 1px 1px 5px #d0d0d0;
+}
+.title-DA {
+  font-weight: 600;
+  border-top: 1px solid #d0d0d0;
+  border-bottom: 1px solid #d0d0d0;
+}
+
+tr {
+  border-top: 1px solid #d0d0d0;
+}
+td {
+  border-top: 1px solid #d0d0d0;
+  padding: 20px;
+}
+td:first-child {
+  width: 50px;
+  vertical-align: top;
+  font-weight: bold;
+}
+
+.title-DA a {
+  text-decoration: none;
+  color: black;
+}
+.title-DA a:hover {
+  color: #0abde3;
+  transition: 0.3s;
+}
+/* ---phần  footer */
+
+.late i {
+  font-size: 30px;
+}
+
+.late a {
+  justify-items: center;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+}
+.late a:hover {
+  color: rgb(190, 69, 69);
+}
+
+/* -----end----- */
+/* digital-cv */
+.digital-cv {
+  background-color: #f0f8ff;
+}
+
+.title-cv {
+  color: blue;
+  border-bottom: 1px solid grey;
+}
+.icon-timeline {
+  display: flex;
+  color: white;
+  background-color: #9e88ff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid gray;
+  justify-content: center;
+  align-items: center;
+}
+.digital-content > div {
+  font-size: 15px;
+}
+.content {
+  border-bottom: 2px dotted lightblue;
+}
+.digital-cv {
+  border: 20px solid blue;
+}
+.border-cv {
+  border-right: 15px solid blue;
+}
+.border-cv1 {
+  border-bottom: 15px solid blue;
+}
+
+.border-cv1 {
+  height: 60%;
+}
+
+.submit a {
+  text-decoration: none;
+  color: white;
+}

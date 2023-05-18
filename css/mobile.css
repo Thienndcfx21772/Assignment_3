@@ -1,0 +1,47 @@
+@media only screen and (max-width: 767px) {
+  .avatar-nav {
+    display: none;
+  }
+  .nav-items {
+    flex-direction: column;
+    text-align: start;
+  }
+  .nav-items a {
+    padding: 10px;
+    border-left: none;
+  }
+  .nav-items a:nth-child(2) {
+    border-right: none;
+  }
+  .nav-items a:nth-child(5) {
+    border-right: none;
+  }
+
+  /* phần chứng chỉ giải thưởng */
+
+  .cer-content1 {
+    border-right: none;
+  }
+  .pro-info {
+    padding-top: 20px;
+  }
+  .pro-CV div {
+    padding-bottom: 10px;
+  }
+
+  .late {
+    flex-direction: column;
+    text-align: center;
+  }
+  /* digital mobile*/
+  .digital-icon {
+    text-align: center;
+  }
+  .border-cv {
+    border-right: none;
+    border-bottom: 15px solid blue;
+  }
+  .border-cv {
+    height: 100%;
+  }
+}
