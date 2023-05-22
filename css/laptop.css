@@ -109,8 +109,9 @@ body {
 #email {
   width: 300px;
   border-radius: 5px;
-  border: 1px solid rgb(38, 168, 219);
-  box-shadow: 1px 1px 5px #d0d0d0;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 5px #16a3ce;
 }
 #error-email {
   color: red;
