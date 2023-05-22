@@ -29,8 +29,8 @@
     padding-bottom: 10px;
   }
 
-  .late {
-    flex-direction: column;
+  .late a {
+    display: none;
     text-align: center;
   }
   /* digital mobile*/
