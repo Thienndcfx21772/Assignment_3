@@ -1,10 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
 * {
   margin: 0px;
   padding: 0;
   box-sizing: border-box;
 }
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif !important;
 }
 
 .bg-grey {
@@ -78,11 +80,11 @@ body {
 .avatar {
   position: absolute;
   display: flex;
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   transform: translate(50%, -50%);
-  top: 40%;
-  left: -40%;
+  top: -70%;
+  left: 20%;
 }
 .img-nav {
   border-radius: 50%;
@@ -141,8 +143,8 @@ body {
   transform: translateY(-3px);
   transition: transform 0.3s ease-in;
 }
-.box-title {
-  font-size: 10px;
+.box-title h2 {
+  font-size: 24px;
   font-weight: bold;
   padding: 10px;
 }
@@ -215,6 +217,12 @@ body {
 }
 .view-more {
   display: none;
+  width: 120px;
+  padding: 5px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #d0d0d0;
 }
 
 /* -----phần 5 - chứng chỉ và giải thưởng------- */
@@ -243,6 +251,7 @@ body {
   box-shadow: 1px 1px 5px #d0d0d0;
 }
 .title-DA {
+  font-size: 20px;
   font-weight: 600;
   border-top: 1px solid #d0d0d0;
   border-bottom: 1px solid #d0d0d0;
