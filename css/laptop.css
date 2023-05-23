@@ -79,14 +79,14 @@ body {
 }
 .avatar {
   position: absolute;
-  display: flex;
-  width: 200px;
-  height: 150px;
+  display: flex; 
   transform: translate(50%, -50%);
   top: 40%;
-  left: -30%;
+  left: -25%;
 }
 .img-nav {
+   width: 150px;
+  height: 150px;
   border-radius: 50%;
   border: 10px solid white;
 }
