@@ -16,10 +16,11 @@
     <link rel="stylesheet" href="./css/tablet.css" />
     <link rel="stylesheet" href="./css/mobile.css" />
     <link rel="stylesheet" href="./css/font.css" />
-   
+
     <title>Assignment 03</title>
   </head>
   <body>
+    <!-- phần banner -->
     <div class="container-fluit">
       <div class="text-banner">
         <h1>Nguyễn Đoàn Công Thiên</h1>
@@ -28,6 +29,7 @@
       <img src="./images/banner.jpg" alt="banner" class="w-100 avatar-banner" />
     </div>
 
+    <!-- phần navbar -->
     <section id="nav-bar ">
       <nav class="nav-items">
         <a href="#"><i class="icon icon-user"></i>&#160;THÔNG TIN</a>
@@ -46,6 +48,7 @@
       </nav>
     </section>
 
+    <!-- phần mục tiêu nghề nghiệp và thông tin cá nhân -->
     <section id="about" class="bg-grey">
       <div class="container-fluit">
         <div class="row">
@@ -68,6 +71,7 @@
               <li><span>Email</span> : contimbaby01@gmail.com</li>
               <li><span>Địa chỉ</span> : Ân Phong - Hoài Ân - Bình Định</li>
               <li><span>Website</span> : https://abc.tech</li>
+
               <div class="py-3 social-icon">
                 <a><i class="icon icon-twitter"></i></a>
                 <a><i class="icon icon-facebook"></i></a>
@@ -75,7 +79,8 @@
                 <a><i class="icon icon-linkedin"></i></a>
               </div>
             </ul>
-            <div class="ps-4 submit-email">
+            <!-- tạo form để js phần email -->
+            <form class="ps-4 submit-email">
               <input type="email" id="email" />
               <p id="error-email" class="pt-2"></p>
               <button
@@ -85,12 +90,13 @@
               >
                 Submit
               </button>
-            </div>
+            </form>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- phần kinh nghiệm -->
     <section class="container pt-5">
       <div class="row">
         <div class="col-md-6 box-job">
@@ -99,14 +105,15 @@
             onmouseover="handleOnMouseOver(this)"
             onmouseout="handleOnMouseOut(this)"
           >
+            <!-- dòng ở trên tạo sự kiện mouse -->
             <div class="col-9 box-title"><h2>Kinh Nghiệm</h2></div>
             <div class="col-3 box-icon">
               <i class="icon ic-toolbox"></i>
             </div>
-            <div class="col-12 p-3 s-content">
+            <div class="col-12 p-3 s-content" id="Kinh-nghiem">
               <div>
                 <h5 class="job-item">Full Stack Developer - Công ty Y</h5>
-                <div class="job">
+                <div class="pb-2">
                   05/2022 - <span class="btn-info button">Hiện tại</span>
                 </div>
                 <div class="job-text">
@@ -135,27 +142,31 @@
                 </div>
               </div>
             </div>
+            <!-- tạo button để js -->
             <div class="control-view">
               <button
                 type="button"
-                class="btn-info view-more"
-                onclick="handleViewMore(this)"
+                id="btnKn"
+                class="view-more"
+                onclick="handleClickKn()"
               >
-                View more
+                View More
               </button>
             </div>
           </div>
 
+          <!-- phần kỹ năng -->
           <div
             class="row p-3 parent"
             onmouseover="handleOnMouseOver(this)"
             onmouseout="handleOnMouseOut(this)"
           >
+            <!-- dòng ở trên tạo sự kiện mouse -->
             <div class="col-9 box-title"><h2>Kỹ năng</h2></div>
             <div class="col-3 box-icon">
               <i class="icon ic-tools-2"></i>
             </div>
-            <div class="col-12 p-3 s-content">
+            <div class="col-12 p-3 s-content" id="ky-nang">
               <div>
                 <p>HTML/CSS:Fundamental</p>
                 <span class="bright"></span><span class="dark"></span
@@ -177,25 +188,29 @@
                 ><span class="dark"></span>
               </div>
             </div>
+            <!-- tạo button để js -->
             <div class="control-view">
               <button
                 type="button"
-                class="btn-info view-more"
-                onclick="handleViewMore(this)"
+                class="view-more"
+                id="btn-ky-nang"
+                onclick="handleClickKyNang()"
               >
-                View more
+                View More
               </button>
             </div>
           </div>
 
+          <!-- phần ngôn ngữ -->
           <div
             class="row p-3 parent"
             onmouseover="handleOnMouseOver(this)"
             onmouseout="handleOnMouseOut(this)"
           >
+            <!-- dòng ở trên tạo sự kiện mouse -->
             <div class="col-9 box-title"><h2>Ngôn ngữ</h2></div>
             <div class="col-3 box-icon"><i class="icon ic-mic"></i></div>
-            <div class="col-12 p-3 s-content">
+            <div class="col-12 p-3 s-content" id="ngon-ngu">
               <div>
                 <p>English-IELTS 7.0</p>
                 <span class="bright"></span><span class="bright"></span
@@ -207,29 +222,33 @@
                 ><span class="dark"></span>
               </div>
             </div>
+            <!-- tạo button để js -->
             <div class="control-view">
               <button
                 type="button"
-                class="btn-info view-more"
-                onclick="handleViewMore(this)"
+                class="view-more"
+                id="btn-ngon-ngu"
+                onclick="handleClickNgonNgu()"
               >
-                View more
+                View More
               </button>
             </div>
           </div>
         </div>
 
+        <!-- phần hoạt động -->
         <div class="col-md-6 box-job">
           <div
             class="row p-3 parent"
             onmouseover="handleOnMouseOver(this)"
             onmouseout="handleOnMouseOut(this)"
           >
+            <!-- dòng ở trên tạo sự kiện mouse -->
             <div class="col-9 box-title"><h2>Hoạt động</h2></div>
             <div class="col-3 box-icon">
               <i class="icon ic-toolbox"></i>
             </div>
-            <div class="col-12 p-3 s-content">
+            <div class="col-12 p-3 s-content" id="hoat-dong">
               <div>
                 <h5 class="job-item">FPT Edu Hackathon 2019</h5>
                 <div class="job">03/2019 - 05/2019</div>
@@ -245,27 +264,31 @@
                 <div><p>- Trưởng ban chuyên môn</p></div>
               </div>
             </div>
+            <!-- tạo button để js -->
             <div class="control-view">
               <button
                 type="button"
-                class="btn-info view-more"
-                onclick="handleViewMore(this)"
+                class="view-more"
+                id="btn-hoat-dong"
+                onclick="handleClickHoatDong()"
               >
-                View more
+                View More
               </button>
             </div>
           </div>
 
+          <!-- phần học vấn -->
           <div
             class="row p-3 parent"
             onmouseover="handleOnMouseOver(this)"
             onmouseout="handleOnMouseOut(this)"
           >
+            <!-- ở trên tạo sự kiện mouse -->
             <div class="col-9 box-title"><h2>Học Vấn</h2></div>
             <div class="col-3 box-icon">
               <i class="icon ic-pencil"></i>
             </div>
-            <div class="col-12 p-3 s-content">
+            <div class="col-12 p-3 s-content" id="hoc-van">
               <div>
                 <h5 class="job-item">FUNiX</h5>
                 <div class="job">06/2021 - 05/2022</div>
@@ -283,27 +306,31 @@
                 </div>
               </div>
             </div>
+            <!-- tạo button để js -->
             <div class="control-view">
               <button
                 type="button"
-                class="btn-info view-more"
-                onclick="handleViewMore(this)"
+                class="view-more"
+                id="btn-hoc-van"
+                onclick="handleClickHocVan()"
               >
-                View more
+                View More
               </button>
             </div>
           </div>
 
+          <!-- phần sở thích -->
           <div
             class="row p-3 parent"
             onmouseover="handleOnMouseOver(this)"
             onmouseout="handleOnMouseOut(this)"
           >
+            <!--dòng ở trên tạo sự kiện mouse -->
             <div class="col-9 box-title"><h2>Sở thích</h2></div>
             <div class="col-3 box-icon">
               <i class="icon ic-telescope"></i>
             </div>
-            <div class="col-12 p-3 s-content">
+            <div class="col-12 p-3 s-content" id="so-thich">
               <div class="row">
                 <div class="col-3 st-icon">
                   <i class="ic-megaphone"></i>
@@ -323,13 +350,15 @@
                 </div>
               </div>
             </div>
+            <!-- tạo button để js -->
             <div class="control-view">
               <button
                 type="button"
-                class="btn-info view-more"
-                onclick="handleViewMore(this)"
+                class="view-more"
+                id="btn-so-thich"
+                onclick="handleClickSoThich()"
               >
-                View more
+                View More
               </button>
             </div>
           </div>
@@ -337,68 +366,78 @@
       </div>
     </section>
 
+    <!-- phần chứng chỉ & giải thưởng -->
     <section id="certificate" class="bg-grey">
       <div class="container">
         <h2 class="section-title">Chứng chỉ - Giải thưởng</h2>
-        <div class="row g-3 grid-cer">
-          <div class="col-md-6 cer-content cer-content1">
-            <div class="row py-3">
-              <div class="col-md-12 col-lg-6">
+        <!-- set layout dòng 1 -->
+        <div class="row">
+          <!-- layout dòng 1 ảnh 1 -->
+          <div class="col-md-6 pb-5 cer-content cer-content1">
+            <div class="row">
+              <div class="col-lg-6 col-md-12">
                 <img
-                  class="img-cc"
+                  class="img-cc w-100"
                   src="./images/Cert_DBI.png"
                   alt="ảnh chứng chỉ"
                 />
               </div>
-
-              <div class="col-lg-6">
-                <h5>chứng chỉ lập trình web-funix</h5>
+              <div class="col-md-6">
+                <h5 class="cer-title">chứng chỉ lập trình web-funix</h5>
                 <p>- chứng chỉ thuộc chương trình CCDN</p>
                 <p>- GPA: 8.6</p>
               </div>
             </div>
           </div>
-
+          <!-- layout dòng 1 ảnh 2 -->
           <div class="col-md-6 cer-content cer-content2">
-            <div class="row py-3">
-              <div class="col-md-12 col-lg-6">
+            <div class="row">
+              <div class="col-lg-6 col-md-12">
                 <img
-                  class="img-cc"
+                  class="img-cc w-100"
                   src="./images/Cert_PRF.png"
                   alt="ảnh chứng chỉ"
                 />
               </div>
-              <div class="col-lg-6">
-                <h5>chứng chỉ lập trình javascript-funix</h5>
+              <div class="col-md-6">
+                <h5 class="cer-title">chứng chỉ lập trình javascript-funix</h5>
                 <p>- chứng chỉ thuộc chương trình CCDN</p>
                 <p>- GPA: 8.9</p>
               </div>
             </div>
           </div>
-          <div class="col-md-6 cer-content cer-content3">
-            <div class="row py-3">
-              <div class="col-md-12 col-lg-6">
+        </div>
+        <!-- set layout dòng 2 -->
+        <div class="row mt-5 cer-border">
+          <!-- set layout dòng 2 ảnh 3 -->
+          <div class="col-md-6 pt-5 cer-content cer-content3">
+            <div class="row">
+              <div class="col-lg-6 col-md-12">
                 <img
-                  class="img-cc"
+                  class="img-cc w-100"
                   src="./images/Cert_WEB.png"
                   alt="ảnh chứng chỉ"
                 />
               </div>
-              <div class="col-lg-6">
-                <h5>chứng chỉ thiết kế database-funix</h5>
+              <div class="col-md-6">
+                <h5 class="cer-title">chứng chỉ thiết kế database-funix</h5>
                 <p>- chứng chỉ thuộc chương trình CCDN</p>
                 <p>- GPA: 8.0</p>
               </div>
             </div>
           </div>
+          <!-- tạo div rỗng set layout dòng 2 -->
+          <div class="col-md-6"></div>
         </div>
       </div>
     </section>
 
+    <!-- phần dự án -->
     <section id="project">
       <div class="container py-5">
         <h2 class="section-title">Dự án</h2>
         <div class="row">
+          <!-- dự án cv cá nhân -->
           <div class="col-md-4 d-flex pro-info">
             <div class="pro-DA">
               <img
@@ -446,6 +485,7 @@
             </div>
           </div>
 
+          <!-- dự án trang web quản lý thú cưng -->
           <div class="col-md-4 d-flex pro-info">
             <div class="pro-DA">
               <img
@@ -495,6 +535,7 @@
             </div>
           </div>
 
+          <!-- dự án trang web xem tin tức -->
           <div class="col-md-4 d-flex pro-info">
             <div class="pro-DA">
               <img
@@ -546,6 +587,7 @@
       </div>
     </section>
 
+    <!-- phần footer -->
     <section id="footer" class="bg-grey">
       <div class="container p-4 d-flex gap-3 justify-content-center late">
         <div>
@@ -562,6 +604,6 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
-    <script src="./js/script.js"></script>    
+    <script src="./js/script.js"></script>
   </body>
 </html>
