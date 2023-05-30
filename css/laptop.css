@@ -168,7 +168,9 @@ body {
   left: -20px;
   top: 6px;
 }
-
+.job {
+  padding-bottom: 5px;
+}
 .button {
   color: white;
   font-style: italic;
