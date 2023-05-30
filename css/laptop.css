@@ -108,16 +108,20 @@ body {
   display: none;
 }
 #email {
-  width: 300px;
+  width: 80%;
+  padding: 5px 0 5px 10px;
   border-radius: 5px;
   border: none;
+  outline: none;
   box-shadow: 0 0 5px #16a3ce;
 }
-#error-email {
-  color: red;
-}
 .submit {
-  border-radius: 5px;
+  border: none;
+  outline: none;
+  width: 150px;
+  padding: 10px;
+  background-color: #16a3ce;
+  border-radius: 10px;
   cursor: pointer;
 }
 .submit:hover {
@@ -142,10 +146,7 @@ body {
   box-shadow: 1px 1px 5px #d0d0d0;
   align-content: start;
 }
-.parent:hover {
-  transform: translateY(-3px);
-  transition: transform 0.3s ease-in;
-}
+
 .box-title h2 {
   font-size: 24px;
   font-weight: bold;
@@ -194,6 +195,9 @@ body {
 }
 
 /* -----phần 4 ngôn ngữ và kỹ năng---- */
+.parent-text p {
+  margin: 24px 0 0 0;
+}
 
 .bright {
   background-color: #0abde3;
@@ -201,7 +205,6 @@ body {
   width: 40px;
   height: 3px;
   margin-right: 20px;
-  margin-top: 10px;
 }
 .dark {
   background-color: rgb(201, 195, 195);
@@ -209,32 +212,42 @@ body {
   width: 40px;
   height: 3px;
   margin-right: 20px;
-  margin-top: 10px;
 }
 
 /* display none để viết javascript */
 .s-content {
   display: none;
 }
-.control-view {
-  display: none;
+.parent:hover {
+  box-shadow: 0 0 5px 0 #665858;
+  transition: 0.3s;
 }
 .view-more,
 .view-less {
   background: #ebeb8a;
   width: 120px;
   padding: 5px;
+  font-size: 14px;
   border: none;
   outline: none;
   border-radius: 10px;
   box-shadow: 0 0 5px #d0d0d0;
+  margin: 10px 20px;
+  visibility: hidden;
+}
+.parent:hover .view-more,
+.parent:hover .view-less {
+  visibility: visible;
 }
 
 /* -----phần 5 - chứng chỉ và giải thưởng------- */
 .cer-title {
   text-transform: uppercase;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 500;
+}
+.cer-content p {
+  margin-bottom: 5px;
 }
 .cer-content2 {
   border-left: 2px solid #d6c08d;
