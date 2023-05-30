@@ -1,3 +1,5 @@
+"use strict";
+
 function handleSubmit() {
   const emailValue = document.getElementById("email").value;
   const errorEmail = document.getElementById("error-email");
@@ -15,20 +17,12 @@ function handleSubmit() {
     errorEmail.innerHTML = "";
   } else {
     errorEmail.innerHTML = "Vui lòng nhập đúng định dạng email";
+    errorEmail.style.color = "red";
   }
 }
+
 // js từ phần kinh nghiệm --> sở thích
 
-// js mouse over
-function handleOnMouseOver(element) {
-  const viewMore = element.querySelector(".control-view");
-  viewMore.style.display = "inline-block";
-}
-// js mouse out
-function handleOnMouseOut(element) {
-  const viewMore = element.querySelector(".control-view");
-  viewMore.style.display = "none";
-}
 // js kinh nghiệm
 function handleClickKn() {
   const kinhNghiem = document.getElementById("Kinh-nghiem");
@@ -39,13 +33,13 @@ function handleClickKn() {
 
     btnKn.classList.remove("view-more");
     btnKn.classList.add("view-less");
-    btnKn.innerHTML = "View Less";
+    btnKn.innerHTML = "⬆ VIEW LESS";
   } else {
     kinhNghiem.style.display = "none";
 
     btnKn.classList.remove("view-less");
     btnKn.classList.add("view-more");
-    btnKn.innerHTML = "View More";
+    btnKn.innerHTML = "⬇ VIEW MORE";
   }
 }
 //js kỹ năng
@@ -58,13 +52,13 @@ function handleClickKyNang() {
 
     btnKyNang.classList.remove("view-more");
     btnKyNang.classList.add("view-less");
-    btnKyNang.innerHTML = "View Less";
+    btnKyNang.innerHTML = "⬆ VIEW LESS";
   } else {
     kyNang.style.display = "none";
 
     btnKyNang.classList.remove("view-less");
     btnKyNang.classList.add("view-more");
-    btnKyNang.innerHTML = "View More";
+    btnKyNang.innerHTML = "⬇ VIEW MORE";
   }
 }
 // js ngôn ngữ
@@ -77,13 +71,13 @@ function handleClickNgonNgu() {
 
     btnNgonNgu.classList.remove("view-more");
     btnNgonNgu.classList.add("view-less");
-    btnNgonNgu.innerHTML = "View Less";
+    btnNgonNgu.innerHTML = "⬆ VIEW LESS";
   } else {
     ngonNgu.style.display = "none";
 
     btnNgonNgu.classList.remove("view-less");
     btnNgonNgu.classList.add("view-more");
-    btnNgonNgu.innerHTML = "View More";
+    btnNgonNgu.innerHTML = "⬇ VIEW MORE";
   }
 }
 // js hoạt động
@@ -96,13 +90,13 @@ function handleClickHoatDong() {
 
     btnHd.classList.remove("view-more");
     btnHd.classList.add("view-less");
-    btnHd.innerHTML = "View Less";
+    btnHd.innerHTML = "⬆ VIEW LESS";
   } else {
     hoatDong.style.display = "none";
 
     btnHd.classList.remove("view-less");
     btnHd.classList.add("view-more");
-    btnHd.innerHTML = "View More";
+    btnHd.innerHTML = "⬇ VIEW MORE";
   }
 }
 // js học vấn
@@ -115,13 +109,13 @@ function handleClickHocVan() {
 
     btnHv.classList.remove("view-more");
     btnHv.classList.add("view-less");
-    btnHv.innerHTML = "View Less";
+    btnHv.innerHTML = "⬆ VIEW LESS";
   } else {
     hocVan.style.display = "none";
 
     btnHv.classList.remove("view-less");
     btnHv.classList.add("view-more");
-    btnHv.innerHTML = "View More";
+    btnHv.innerHTML = "⬇ VIEW MORE";
   }
 }
 // js sở thích
@@ -134,12 +128,12 @@ function handleClickSoThich() {
 
     btnSt.classList.remove("view-more");
     btnSt.classList.add("view-less");
-    btnSt.innerHTML = "View Less";
+    btnSt.innerHTML = "⬆ VIEW LESS";
   } else {
     soThich.style.display = "none";
 
     btnSt.classList.remove("view-less");
     btnSt.classList.add("view-more");
-    btnSt.innerHTML = "View More";
+    btnSt.innerHTML = "⬇ VIEW MORE";
   }
 }
