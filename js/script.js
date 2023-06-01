@@ -1,26 +1,79 @@
 "use strict";
 
-function handleSubmit() {
+// function handleSubmit() {
+//   const emailValue = document.getElementById("email").value;
+//   const errorEmail = document.getElementById("error-email");
+
+//   const checkMail =
+//     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+//   const checkEmail = emailValue.match(checkMail);
+//   const info = document.querySelector(".info");
+//   const submitControl = document.querySelector(".submit-email");
+
+//   if (checkEmail) {
+//     info.style.display = "block";
+//     submitControl.style.display = "none";
+//     errorEmail.innerHTML = "";
+//   } else {
+//     errorEmail.innerHTML = "Vui lòng nhập đúng định dạng email";
+//     errorEmail.style.color = "red";
+//   }
+// }
+// khai báo dữ liệu
+const submitEmail = document.querySelector(".submit-email");
+const info = document.querySelector(".info");
+const submit = document.querySelector(".submit");
+const closeInfo = document.querySelector(".close-info");
+const inputChange = document.getElementById("email");
+const errorEmail = document.getElementById("error-email");
+// kiểm tra tính hợp lệ của email
+const validay = (email) => {
+  return email.match(
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  );
+};
+// bắt sự kiện click nút submit
+submit.addEventListener("click", function () {
   const emailValue = document.getElementById("email").value;
-  const errorEmail = document.getElementById("error-email");
-
-  const checkMail =
-    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-  const checkEmail = emailValue.match(checkMail);
-  const info = document.querySelector(".info");
-  const submitControl = document.querySelector(".submit-email");
-
-  if (checkEmail) {
+  if (validay(emailValue)) {
     info.style.display = "block";
-    submitControl.style.display = "none";
-    errorEmail.innerHTML = "";
+    submitEmail.style.display = "none";
+  }
+});
+// bắt sự kiện phím Enter
+inputChange.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    submit.click();
+  }
+});
+// bắt sự kiện click nút close email để trở lại như lúc đầu
+closeInfo.addEventListener("click", function () {
+  const emailValueNew = document.getElementById("email");
+  info.style.display = "none";
+  submitEmail.style.display = "block";
+  emailValueNew.value = "";
+  inputChange.focus();
+});
+// bắt sự kiện khi nhấn phím ko đúng theo format email
+inputChange.addEventListener("input", function () {
+  const emailValue = document.getElementById("email").value;
+  if (validay(emailValue)) {
+    errorEmail.textContent = "";
   } else {
-    errorEmail.innerHTML = "Vui lòng nhập đúng định dạng email";
+    errorEmail.textContent = "Bạn nhập sai định dạng email";
     errorEmail.style.color = "red";
   }
-}
-
+});
+// bắt sự kiện khi click chuột vào input
+inputChange.addEventListener("click", function () {
+  const emailValue = document.getElementById("email").value;
+  if (!validay(emailValue)) {
+    errorEmail.textContent = "Vui lòng nhập email";
+    errorEmail.style.color = "red";
+  }
+});
 // js từ phần kinh nghiệm --> sở thích
 
 // js kinh nghiệm
