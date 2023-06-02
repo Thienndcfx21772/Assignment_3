@@ -39,9 +39,13 @@ submit.addEventListener("click", function () {
   if (validay(emailValue)) {
     info.style.display = "block";
     submitEmail.style.display = "none";
+  } else {
+    errorEmail.textContent = "Sai định dạng email hãy nhập lại cho đúng";
+    errorEmail.style.color = "red";
+    inputChange.focus();
   }
 });
-// bắt sự kiện phím Enter
+// bắt sự kiện phím Enter = click nút submit
 inputChange.addEventListener("keydown", function (event) {
   if (event.key === "Enter") {
     event.preventDefault();
@@ -49,31 +53,24 @@ inputChange.addEventListener("keydown", function (event) {
   }
 });
 // bắt sự kiện click nút close email để trở lại như lúc đầu
-closeInfo.addEventListener("click", function () {
+const btnCloseInfo = function () {
   const emailValueNew = document.getElementById("email");
   info.style.display = "none";
   submitEmail.style.display = "block";
   emailValueNew.value = "";
-  inputChange.focus();
-});
-// bắt sự kiện khi nhấn phím ko đúng theo format email
-inputChange.addEventListener("input", function () {
-  const emailValue = document.getElementById("email").value;
-  if (validay(emailValue)) {
-    errorEmail.textContent = "";
-  } else {
-    errorEmail.textContent = "Bạn nhập sai định dạng email";
-    errorEmail.style.color = "red";
+  emailValueNew.focus();
+  errorEmail.textContent = "Hãy nhập email để xác thực";
+  errorEmail.style.color = "black";
+};
+closeInfo.addEventListener("click", btnCloseInfo);
+
+// bắt sự kiện phím Esc = click nút close
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    btnCloseInfo();
   }
 });
-// bắt sự kiện khi click chuột vào input
-inputChange.addEventListener("click", function () {
-  const emailValue = document.getElementById("email").value;
-  if (!validay(emailValue)) {
-    errorEmail.textContent = "Vui lòng nhập email";
-    errorEmail.style.color = "red";
-  }
-});
+
 // js từ phần kinh nghiệm --> sở thích
 
 // js kinh nghiệm
