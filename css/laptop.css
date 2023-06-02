@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 body {
-  font-family: "Roboto", sans-serif !important;
+  font-family: "Roboto", sans-serif;
 }
 
 .bg-grey {
@@ -208,8 +208,8 @@ body {
 }
 
 /* -----phần 4 ngôn ngữ và kỹ năng---- */
-.parent-text p {
-  margin: 24px 0 0 0;
+.parent-text span {
+  margin-bottom: 24px;
 }
 
 .bright {
