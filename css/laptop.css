@@ -100,22 +100,28 @@ body {
 .thong-tin span {
   font-weight: 600;
 }
-.ul {
-  position: relative;
-}
-.close-info {
-  color: #0abde3;
-  font-size: 30px;
-  position: absolute;
-  bottom: -15%;
-  right: 10%;
-  cursor: pointer;
-}
-/* ẩn thông tin cá nhân đến khi submit email */
-
 .info {
   list-style: none;
+}
+
+/* ẩn thông tin cá nhân đến khi submit email  và form input*/
+
+.info-group {
+  position: relative;
   display: none;
+}
+.close-info {
+  background: #0abde3;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0px;
+  right: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
 }
 #email {
   width: 80%;
@@ -211,7 +217,6 @@ body {
 .parent-text span {
   margin-bottom: 24px;
 }
-
 .bright {
   background-color: #0abde3;
   display: inline-block;
