@@ -1,28 +1,9 @@
 "use strict";
 
-// function handleSubmit() {
-//   const emailValue = document.getElementById("email").value;
-//   const errorEmail = document.getElementById("error-email");
 
-//   const checkMail =
-//     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-//   const checkEmail = emailValue.match(checkMail);
-//   const info = document.querySelector(".info");
-//   const submitControl = document.querySelector(".submit-email");
-
-//   if (checkEmail) {
-//     info.style.display = "block";
-//     submitControl.style.display = "none";
-//     errorEmail.innerHTML = "";
-//   } else {
-//     errorEmail.innerHTML = "Vui lòng nhập đúng định dạng email";
-//     errorEmail.style.color = "red";
-//   }
-// }
 // khai báo dữ liệu
 const submitEmail = document.querySelector(".submit-email");
-const info = document.querySelector(".info");
+const infoGroup = document.querySelector(".info-group");
 const submit = document.querySelector(".submit");
 const closeInfo = document.querySelector(".close-info");
 const inputChange = document.getElementById("email");
@@ -37,7 +18,7 @@ const validay = (email) => {
 submit.addEventListener("click", function () {
   const emailValue = document.getElementById("email").value;
   if (validay(emailValue)) {
-    info.style.display = "block";
+    infoGroup.style.display = "block";
     submitEmail.style.display = "none";
   } else {
     errorEmail.textContent = "Sai định dạng email hãy nhập lại cho đúng";
@@ -55,7 +36,7 @@ inputChange.addEventListener("keydown", function (event) {
 // bắt sự kiện click nút close email để trở lại như lúc đầu
 const btnCloseInfo = function () {
   const emailValueNew = document.getElementById("email");
-  info.style.display = "none";
+  infoGroup.style.display = "none";
   submitEmail.style.display = "block";
   emailValueNew.value = "";
   emailValueNew.focus();
