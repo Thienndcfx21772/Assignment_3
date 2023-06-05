@@ -105,243 +105,272 @@
     </section>
 
     <!-- phần lý lịch từ kinh nghiệm -> sở thích -->
-    <section id="infomation" class="container pt-5">
-      <div class="row">
-        <!-- set layout dạng masonry cho tablet chia 2 cột -->
-        <div class="col-md-6 box-job">
-          <!-- chuyển layout cột 1 thành dòng ở phần css. set layout 3 box dòng 1 -->
-          <!-- phần kinh nghiệm -->
-          <div class="row p-3 parent">
-            <div class="col-9 box-title"><h2>Kinh Nghiệm</h2></div>
-            <div class="col-3 box-icon">
-              <i class="icon ic-toolbox"></i>
-            </div>
-            <div class="col-12 p-3 s-content" id="Kinh-nghiem">
-              <div>
-                <h5 class="job-item">Full Stack Developer - Công ty Y</h5>
-                <div class="pb-2">
-                  05/2022 - <span class="btn-info button">Hiện tại</span>
-                </div>
-                <div class="job-text">
-                  <p>
-                    - Xây dựng, phát triển Website dựa trên thiết kế và yêu cầu
-                    đã có.
-                  </p>
-                  <p>
-                    - Phân tích và thiết kế Database, sử dụng các hệ quản trị
-                    CSDL (MySQL, SQLServer, NoSQL, …) và viết được các câu truy
-                    vấn.
-                  </p>
-                  <p>
-                    - Sử dụng ngôn ngữ server-side (Python, Java, …) để xây dựng
-                    các Web Serv
-                  </p>
+    <section id="infomation">
+      <div class="container my-5">
+        <div class="row g-4">
+          <!-- col 1 đổi thành row 1 -->
+          <div class="col-md-6 col-lg-12">
+            <div class="row g-4">
+              <!-- kinh nghiệm -->
+              <div class="col-lg-4 col-md-12 d-flex">
+                <div class="card p-3 flex-fill">
+                  <header class="row">
+                    <div class="col-9"><h2>Kinh Nghiệm</h2></div>
+                    <div class="col-3">
+                      <i class="icon fs-1 ic-toolbox"></i>
+                    </div>
+                  </header>
+                  <div class="col-12 p-3 s-content" id="Kinh-nghiem">
+                    <div>
+                      <h5 class="job-item">Full Stack Developer - Công ty Y</h5>
+                      <div class="pb-2">
+                        05/2022 -
+                        <span class="btn_submit">Hiện tại</span>
+                      </div>
+                      <div class="job-text">
+                        <p>
+                          - Xây dựng, phát triển Website dựa trên thiết kế và
+                          yêu cầu đã có.
+                        </p>
+                        <p>
+                          - Phân tích và thiết kế Database, sử dụng các hệ quản
+                          trị CSDL (MySQL, SQLServer, NoSQL, …) và viết được các
+                          câu truy vấn.
+                        </p>
+                        <p>
+                          - Sử dụng ngôn ngữ server-side (Python, Java, …) để
+                          xây dựng các Web Serv
+                        </p>
+                      </div>
+                    </div>
+
+                    <div>
+                      <h5 class="job-item">Web Designer - Công ty X</h5>
+                      <div class="job">06/2021 - 04/2022</div>
+                      <div class="job-text">
+                        <p>
+                          - Thiết kế Website dự trên yêu cầu của khách hàng.
+                        </p>
+                        <p>- Sử dụng các công cụ: Figma, Canva, PTS.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <footer class="control-view">
+                    <button
+                      type="button"
+                      id="btnKn"
+                      class="view-more"
+                      onclick="handleClickKn()"
+                    >
+                      ⬇ VIEW MORE
+                    </button>
+                  </footer>
                 </div>
               </div>
 
-              <div>
-                <h5 class="job-item">Web Designer - Công ty X</h5>
-                <div class="job">06/2021 - 04/2022</div>
-                <div class="job-text">
-                  <p>- Thiết kế Website dự trên yêu cầu của khách hàng.</p>
-                  <p>- Sử dụng các công cụ: Figma, Canva, PTS.</p>
+              <!-- kỹ năng -->
+              <div class="col-lg-4 col-md-12 d-flex">
+                <div class="card p-3 flex-fill">
+                  <header class="row">
+                    <div class="col-9 box-title"><h2>Kỹ năng</h2></div>
+                    <div class="col-3">
+                      <i class="icon fs-1 ic-tools-2"></i>
+                    </div>
+                  </header>
+                  <div class="col-12 p-3 s-content" id="ky-nang">
+                    <div class="parent-text">
+                      <p>HTML/CSS:Fundamental</p>
+                      <span class="bright"></span><span class="dark"></span
+                      ><span class="dark"></span>
+                    </div>
+                    <div class="parent-text">
+                      <p>Javascript: Intermediate</p>
+                      <span class="bright"></span><span class="bright"></span
+                      ><span class="dark"></span>
+                    </div>
+                    <div class="parent-text">
+                      <p>NodeJS: Intermediate</p>
+                      <span class="bright"></span><span class="bright"></span
+                      ><span class="dark"></span>
+                    </div>
+                    <div class="parent-text">
+                      <p>Bootstrap 5: Fundamental</p>
+                      <span class="bright"></span><span class="dark"></span
+                      ><span class="dark"></span>
+                    </div>
+                  </div>
+                  <footer class="control-view">
+                    <button
+                      type="button"
+                      class="view-more"
+                      id="btn-ky-nang"
+                      onclick="handleClickKyNang()"
+                    >
+                      ⬇ VIEW MORE
+                    </button>
+                  </footer>
                 </div>
               </div>
-            </div>
-            <!-- tạo button để js -->
-            <div class="control-view">
-              <button
-                type="button"
-                id="btnKn"
-                class="view-more"
-                onclick="handleClickKn()"
-              >
-                ⬇ VIEW MORE
-              </button>
+
+              <!-- ngôn ngữ -->
+              <div class="col-lg-4 col-md-12 d-flex">
+                <div class="card p-3 flex-fill">
+                  <header class="row">
+                    <div class="col-9 box-title"><h2>Ngôn ngữ</h2></div>
+                    <div class="col-3">
+                      <i class="icon fs-1 ic-mic"></i>
+                    </div>
+                  </header>
+                  <div class="col-12 p-3 s-content" id="ngon-ngu">
+                    <div class="parent-text">
+                      <p>English-IELTS 7.0</p>
+                      <span class="bright"></span><span class="bright"></span
+                      ><span class="dark"></span>
+                    </div>
+                    <div class="parent-text">
+                      <p>Japanese-N3</p>
+                      <span class="bright"></span><span class="dark"></span
+                      ><span class="dark"></span>
+                    </div>
+                  </div>
+                  <footer class="control-view">
+                    <button
+                      type="button"
+                      class="view-more"
+                      id="btn-ngon-ngu"
+                      onclick="handleClickNgonNgu()"
+                    >
+                      ⬇ VIEW MORE
+                    </button>
+                  </footer>
+                </div>
+              </div>
             </div>
           </div>
 
-          <!-- phần kỹ năng -->
-          <div class="row p-3 parent">
-            <div class="col-9 box-title"><h2>Kỹ năng</h2></div>
-            <div class="col-3 box-icon">
-              <i class="icon ic-tools-2"></i>
-            </div>
-            <div class="col-12 p-3 s-content" id="ky-nang">
-              <div class="parent-text">
-                <p>HTML/CSS:Fundamental</p>
-                <span class="bright"></span><span class="dark"></span
-                ><span class="dark"></span>
-              </div>
-              <div class="parent-text">
-                <p>Javascript: Intermediate</p>
-                <span class="bright"></span><span class="bright"></span
-                ><span class="dark"></span>
-              </div>
-              <div class="parent-text">
-                <p>NodeJS: Intermediate</p>
-                <span class="bright"></span><span class="bright"></span
-                ><span class="dark"></span>
-              </div>
-              <div class="parent-text">
-                <p>Bootstrap 5: Fundamental</p>
-                <span class="bright"></span><span class="dark"></span
-                ><span class="dark"></span>
-              </div>
-            </div>
-            <!-- tạo button để js -->
-            <div class="control-view">
-              <button
-                type="button"
-                class="view-more"
-                id="btn-ky-nang"
-                onclick="handleClickKyNang()"
-              >
-                ⬇ VIEW MORE
-              </button>
-            </div>
-          </div>
-
-          <!-- phần ngôn ngữ -->
-          <div class="row p-3 parent">
-            <div class="col-9 box-title"><h2>Ngôn ngữ</h2></div>
-            <div class="col-3 box-icon"><i class="icon ic-mic"></i></div>
-            <div class="col-12 p-3 s-content" id="ngon-ngu">
-              <div class="parent-text">
-                <p>English-IELTS 7.0</p>
-                <span class="bright"></span><span class="bright"></span
-                ><span class="dark"></span>
-              </div>
-              <div class="parent-text">
-                <p>Japanese-N3</p>
-                <span class="bright"></span><span class="dark"></span
-                ><span class="dark"></span>
-              </div>
-            </div>
-            <!-- tạo button để js -->
-            <div class="control-view">
-              <button
-                type="button"
-                class="view-more"
-                id="btn-ngon-ngu"
-                onclick="handleClickNgonNgu()"
-              >
-                ⬇ VIEW MORE
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- layout cột 2 chuyển thành dòng ở css và chia 3 box -->
-        <div class="col-md-6 box-job">
-          <!-- phần hoạt động -->
-          <div class="row p-3 parent">
-            <div class="col-9 box-title"><h2>Hoạt động</h2></div>
-            <div class="col-3 box-icon">
-              <i class="icon ic-toolbox"></i>
-            </div>
-            <div class="col-12 p-3 s-content" id="hoat-dong">
-              <div>
-                <h5 class="job-item">FPT Edu Hackathon 2019</h5>
-                <div class="job">03/2019 - 05/2019</div>
-                <div>
-                  <p>- Giải 3 bảng A</p>
-                  <p>- Đề tài: Trang web về phân loại rác thải.</p>
+          <!-- col 2 đổi thành row 2 -->
+          <div class="col-md-6 col-lg-12">
+            <div class="row g-4">
+              <!-- hoạt động -->
+              <div class="col-lg-4 col-md-12 d-flex">
+                <div class="card p-3 flex-fill">
+                  <header class="row">
+                    <div class="col-9 box-title"><h2>Hoạt động</h2></div>
+                    <div class="col-3">
+                      <i class="icon fs-1 ic-toolbox"></i>
+                    </div>
+                  </header>
+                  <div class="col-12 p-3 s-content" id="hoat-dong">
+                    <div>
+                      <h5 class="job-item">FPT Edu Hackathon 2019</h5>
+                      <div class="job">03/2019 - 05/2019</div>
+                      <div>
+                        <p>- Giải 3 bảng A</p>
+                        <p>- Đề tài: Trang web về phân loại rác thải.</p>
+                      </div>
+                    </div>
+                    <div>
+                      <h5 class="job-item">Câu lạc bộ Z</h5>
+                      <div class="job">08/2018 - 08/2019</div>
+                      <div><p>- Trưởng ban chuyên môn</p></div>
+                    </div>
+                  </div>
+                  <footer class="control-view">
+                    <button
+                      type="button"
+                      class="view-more"
+                      id="btn-hoat-dong"
+                      onclick="handleClickHoatDong()"
+                    >
+                      ⬇ VIEW MORE
+                    </button>
+                  </footer>
                 </div>
               </div>
 
-              <div>
-                <h5 class="job-item">Câu lạc bộ Z</h5>
-                <div class="job">08/2018 - 08/2019</div>
-                <div><p>- Trưởng ban chuyên môn</p></div>
+              <!-- học vấn -->
+              <div class="col-lg-4 col-md-12 d-flex">
+                <div class="card p-3 flex-fill">
+                  <header class="row">
+                    <div class="col-9 box-title"><h2>Học Vấn</h2></div>
+                    <div class="col-3">
+                      <i class="icon fs-1 ic-pencil"></i>
+                    </div>
+                  </header>
+                  <div class="col-12 p-3 s-content" id="hoc-van">
+                    <div>
+                      <h5 class="job-item">FUNiX</h5>
+                      <div class="job">06/2021 - 05/2022</div>
+                      <div class="job-text">
+                        <p>
+                          - Tốt nghiệp chứng chỉ doanh nghiệp nhánh Fullstack.
+                        </p>
+                        <p>- GPA:9/10</p>
+                      </div>
+                    </div>
+                    <div>
+                      <h5 class="job-item">Cử nhân - ĐH FPT</h5>
+                      <div class="job">08/2016 - 07/2019</div>
+                      <div class="job-text">
+                        <p>- Chuyên ngành: Kỹ thuật phần mềm</p>
+                        <p>- GPA: 3.2/4</p>
+                      </div>
+                    </div>
+                  </div>
+                  <footer class="control-view">
+                    <button
+                      type="button"
+                      class="view-more"
+                      id="btn-hoc-van"
+                      onclick="handleClickHocVan()"
+                    >
+                      ⬇ VIEW MORE
+                    </button>
+                  </footer>
+                </div>
               </div>
-            </div>
-            <!-- tạo button để js -->
-            <div class="control-view">
-              <button
-                type="button"
-                class="view-more"
-                id="btn-hoat-dong"
-                onclick="handleClickHoatDong()"
-              >
-                ⬇ VIEW MORE
-              </button>
-            </div>
-          </div>
 
-          <!-- phần học vấn -->
-          <div class="row p-3 parent">
-            <div class="col-9 box-title"><h2>Học Vấn</h2></div>
-            <div class="col-3 box-icon">
-              <i class="icon ic-pencil"></i>
-            </div>
-            <div class="col-12 p-3 s-content" id="hoc-van">
-              <div>
-                <h5 class="job-item">FUNiX</h5>
-                <div class="job">06/2021 - 05/2022</div>
-                <div class="job-text">
-                  <p>- Tốt nghiệp chứng chỉ doanh nghiệp nhánh Fullstack.</p>
-                  <p>- GPA:9/10</p>
+              <!-- sở thích -->
+              <div class="col-lg-4 col-md-12 d-flex">
+                <div class="card p-3 flex-fill">
+                  <header class="row">
+                    <div class="col-9 box-title"><h2>Sở thích</h2></div>
+                    <div class="col-3">
+                      <i class="icon fs-1 ic-telescope"></i>
+                    </div>
+                  </header>
+                  <div class="col-12 p-3 s-content" id="so-thich">
+                    <div class="row">
+                      <div class="col-3 st-icon">
+                        <i class="icon ic-megaphone"></i>
+                        <p>Âm nhạc</p>
+                      </div>
+                      <div class="col-3 st-icon">
+                        <i class="icon ic-strategy"></i>
+                        <p>Chơi game</p>
+                      </div>
+                      <div class="col-3 st-icon">
+                        <i class="icon ic-hotairballoon"></i>
+                        <p>Du lịch</p>
+                      </div>
+                      <div class="col-3 st-icon">
+                        <i class="icon ic-basket"></i>
+                        <p>Nấu ăn</p>
+                      </div>
+                    </div>
+                  </div>
+                  <footer class="control-view">
+                    <button
+                      type="button"
+                      class="view-more"
+                      id="btn-so-thich"
+                      onclick="handleClickSoThich()"
+                    >
+                      ⬇ VIEW MORE
+                    </button>
+                  </footer>
                 </div>
               </div>
-              <div>
-                <h5 class="job-item">Cử nhân - ĐH FPT</h5>
-                <div class="job">08/2016 - 07/2019</div>
-                <div class="job-text">
-                  <p>- Chuyên ngành: Kỹ thuật phần mềm</p>
-                  <p>- GPA: 3.2/4</p>
-                </div>
-              </div>
-            </div>
-            <!-- tạo button để js -->
-            <div class="control-view">
-              <button
-                type="button"
-                class="view-more"
-                id="btn-hoc-van"
-                onclick="handleClickHocVan()"
-              >
-                ⬇ VIEW MORE
-              </button>
-            </div>
-          </div>
-
-          <!-- phần sở thích -->
-          <div class="row p-3 parent">
-            <div class="col-9 box-title"><h2>Sở thích</h2></div>
-            <div class="col-3 box-icon">
-              <i class="icon ic-telescope"></i>
-            </div>
-            <div class="col-12 p-3 s-content" id="so-thich">
-              <div class="row">
-                <div class="col-3 st-icon">
-                  <i class="ic-megaphone"></i>
-                  <p>Âm nhạc</p>
-                </div>
-                <div class="col-3 st-icon">
-                  <i class="ic-strategy"></i>
-                  <p>Chơi game</p>
-                </div>
-                <div class="col-3 st-icon">
-                  <i class="ic-hotairballoon"></i>
-                  <p>Du lịch</p>
-                </div>
-                <div class="col-3 st-icon">
-                  <i class="ic-basket"></i>
-                  <p>Nấu ăn</p>
-                </div>
-              </div>
-            </div>
-            <!-- tạo button để js -->
-            <div class="control-view">
-              <button
-                type="button"
-                class="view-more"
-                id="btn-so-thich"
-                onclick="handleClickSoThich()"
-              >
-                ⬇ VIEW MORE
-              </button>
             </div>
           </div>
         </div>
